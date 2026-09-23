@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>ASTRA VEDIC | Celestial Sanctuary & Astral Masterpieces</title>
+  <meta name="description" content="Astra Vedic ke sacred astral masterpieces, free astrology consultation appointment, aur online kundli report download portal.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="celestial-app-theme">
+  <canvas id="cosmic-canvas" aria-hidden="true"></canvas>
+
+  <div class="app-viewport">
+    
+    <!-- TOP APP BAR (Responsive Desktop & Mobile Navigation) -->
+    <header class="app-top-bar" id="app-header">
+      <div class="top-bar-inner">
+        <div class="top-bar-left" onclick="app.showPage('home')" style="cursor: pointer;">
+          <div class="brand-monogram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <circle cx="12" cy="12" r="4"/>
+              <line x1="12" y1="2" x2="12" y2="4"/>
+              <line x1="12" y1="20" x2="12" y2="22"/>
+              <line x1="2" y1="12" x2="4" y2="12"/>
+              <line x1="20" y1="12" x2="22" y2="12"/>
+            </svg>
+          </div>
+          <div class="brand-info">
+            <div class="brand-title-row">
+              <span class="brand-title">ASTRA VEDIC</span>
+            </div>
+            <span class="intake-status"><span class="live-dot"></span> Himalayan Sanctuary Live</span>
+          </div>
+        </div>
+
+        <!-- DESKTOP NAVIGATION LINKS (Visible on tablet & desktop, hidden on mobile) -->
+        <nav class="desktop-nav-links">
+          <a href="javascript:void(0)" onclick="app.showPage('home')" class="d-nav-item active" id="d-nav-home">Home</a>
+          <a href="javascript:void(0)" onclick="app.scrollToSection('section-artifacts')" class="d-nav-item">Sacred Artifacts</a>
+          <a href="javascript:void(0)" onclick="app.scrollToSection('section-intentions')" class="d-nav-item">Spiritual Intentions</a>
+          <a href="javascript:void(0)" onclick="app.scrollToSection('section-why-us')" class="d-nav-item">Why Astra Vedic</a>
+          <a href="javascript:void(0)" onclick="app.showPage('appointment')" class="d-nav-item" id="d-nav-appt">Vedic Consultation</a>
+          <a href="javascript:void(0)" onclick="app.showPage('status')" class="d-nav-item" id="d-nav-status">Kundli Report</a>
+        </nav>
+
+        <div class="top-bar-right">
+          <button class="btn-app-gold-pill" onclick="app.showPage('appointment')">
+            <svg class="btn-svg-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <span>Book Free Call</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN APP PAGES WRAPPER -->
+    <div class="app-pages-wrapper">
+
+      <!-- ============================================== -->
+      <!-- PAGE 1: HOME PAGE -->
+      <!-- ============================================== -->
+      <section class="app-page active" id="page-home">
+        
+        <!-- FULL-BLEED UPPER AREA HERO (Spans 100% Edge-to-Edge Under iPhone Glass Header) -->
+        <div class="hero-fullbleed-wrapper">
+          
+          <!-- HERO CAROUSEL: AUTO-ROTATES EVERY 5 SECONDS (No Dots / No Swipe Indicator) -->
+          <div class="hero-carousel-container" id="hero-carousel">
+            <div class="hero-slides-track" id="hero-slides-track">
+              
+              <!-- SLIDE 1: BOOK FREE CONSULTATION (VEDIC ACHARYA DIRECT CALL) -->
+              <div class="hero-slide-card cinematic-hero-card" style="background-image: url('assets/hero-consult-bg.jpg');">
+                <div class="cinematic-hero-overlay"></div>
+                <div class="cinematic-hero-content">
+                  <h1 class="hero-cinematic-title">
+                    Acharya Se Live Call Karein, <span class="hero-gold-accent">Kundli & Grah Dasha</span> Par.
+                  </h1>
+                  <p class="hero-cinematic-desc">
+                    Vivah, Career ya Dhan ki samasya? Himalayan Sansthan ke Senior Acharya se direct phone / video call par nishulk personalized guidance payein.
+                  </p>
+
+                  <div class="hero-actions-stack">
+                    <button class="btn-cinematic-gold" onclick="app.showPage('appointment')">
+                      <svg class="btn-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                      </svg>
+                      <span>Book Free Call Now</span>
+                    </button>
+                    <button class="btn-cinematic-glass" onclick="app.showPage('appointment')">
+                      <svg class="btn-svg-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                        <line x1="12" y1="19" x2="12" y2="23"/>
+                        <line x1="8" y1="23" x2="16" y2="23"/>
+                      </svg>
+                      <span>15-Min Free Session</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SLIDE 2: DOWNLOAD REPORT (CINEMATIC KUNDLI ALMANAC BACKGROUND) -->
+              <div class="hero-slide-card cinematic-hero-card" style="background-image: url('assets/hero-report-bg.jpg');">
+                <div class="cinematic-hero-overlay"></div>
+                <div class="cinematic-hero-content">
+                  <div class="hero-kicker-line">
+                    <span class="hero-kicker-dash"></span>
+                    <span class="hero-kicker-text">CERTIFIED 25-YEAR PLANETARY DASHA • INSTANT PDF</span>
+                  </div>
+                  <h2 class="hero-cinematic-title">
+                    Apna Certified <span class="hero-gold-accent">Kundli Almanac</span> Download Karein.
+                  </h2>
+                  <p class="hero-cinematic-desc">
+                    Registered number enter karein aur Acharya dwara verify ki gayi 25-year planetary dasha report PDF payein.
+                  </p>
+                  <div class="hero-actions-stack">
+                    <button class="btn-cinematic-gold" onclick="app.showPage('status')">
+                      <svg class="btn-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                      </svg>
+                      <span>Download Kundli Report</span>
+                    </button>
+                    <button class="btn-cinematic-glass" onclick="app.showPage('status')">
+                      <svg class="btn-svg-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 11l3 3L22 4"/>
+                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                      </svg>
+                      <span>Check Verification Status</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="app-scroll-content">
+          <!-- HERO STATS TRUST BAND (PropZen Concept: Key Credibility Pillars) -->
+          <div class="hero-stats-band">
+            <div class="h-stat-box">
+              <span class="h-stat-num">1008+</span>
+              <span class="h-stat-label">Rigvedic Beej Mantras</span>
+            </div>
+            <div class="h-stat-divider"></div>
+            <div class="h-stat-box">
+              <span class="h-stat-num">100%</span>
+              <span class="h-stat-label">GI Lab Certified Minerals</span>
+            </div>
+            <div class="h-stat-divider"></div>
+            <div class="h-stat-box">
+              <span class="h-stat-num">4:24 AM</span>
+              <span class="h-stat-label">Brahmamuhurta Pratishtha</span>
+            </div>
+            <div class="h-stat-divider"></div>
+            <div class="h-stat-box">
+              <span class="h-stat-num">0%</span>
+              <span class="h-stat-label">Commercial Pressure</span>
+            </div>
+          </div>
+
+          <!-- SECTION 1: SACRED VEDIC ARTIFACTS (Responsive 2-Col/4-Col Grid) -->
+          <section class="home-section" id="section-artifacts">
+            <div class="section-title-row">
+              <div>
+                <span class="kicker-tag">ASTRAL MASTERPIECES</span>
+                <h2 class="app-sec-title">Sacred Vedic Artifacts</h2>
+                <p class="section-subtitle">Pancha-Tattva gemstones aur Kuber Yantra se abhimantrit pavitra kavach, jo aapke bio-magnetic aura ko align karte hain.</p>
+              </div>
+            </div>
+
+            <div class="artifacts-grid">
+              <!-- Product 1 Card: Money Magnet -->
+              <div class="rolex-teaser-card" onclick="app.showProduct('money-magnet')">
+                <div class="teaser-img-box">
+                  <img src="assets/money-magnet-1.jpg" alt="Money Magnet Bracelet" class="teaser-img">
+                  <span class="teaser-badge">Dhan Aakarshan</span>
+                </div>
+                <div class="teaser-info">
+                  <span class="teaser-cat">SACRED WEALTH ALIGNMENT</span>
+                  <h3 class="teaser-title">Vedic 5-Element Money Magnet & Abundance Bracelet</h3>
+                  <p class="teaser-desc">Block dhan ko release karta hai aur Lakshmi energy ko attract karta hai. Pyrite, Citrine aur Aventurine ka certified 5-element kram.</p>
+                  <div class="teaser-cta-line">
+                    <span>Explore Masterpiece Details</span>
+                    <span class="arrow-ico">→</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Product 2 Card: Career & Leadership -->
+              <div class="rolex-teaser-card" onclick="app.showProduct('career-shield')">
+                <div class="teaser-img-box">
+                  <img src="assets/career-shield-1.jpg" alt="Career & Authority Astral Shield" class="teaser-img">
+                  <span class="teaser-badge">Dasham Bhav Authority</span>
+                </div>
+                <div class="teaser-info">
+                  <span class="teaser-cat">10TH HOUSE KARMA BHAVA • ROYAL AUTHORITY</span>
+                  <h3 class="teaser-title">Aditya-Tejas Surya-Budh Career & Authority Shield</h3>
+                  <p class="teaser-desc">Job promotion stagnation, office politics aur high-stakes boardroom deals me Surya Bhagwan ki royal authority aur Budh ki strategic clarity.</p>
+                  <div class="teaser-cta-line">
+                    <span>Explore Masterpiece Details</span>
+                    <span class="arrow-ico">→</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Product 3 Card: Prem & Sambandh Harmony -->
+              <div class="rolex-teaser-card" onclick="app.showProduct('love-harmony')">
+                <div class="teaser-img-box">
+                  <img src="assets/love-harmony-1.jpg" alt="Prem & Sambandh Harmony Bracelet" class="teaser-img">
+                  <span class="teaser-badge">Prem & Vivah Harmony</span>
+                </div>
+                <div class="teaser-info">
+                  <span class="teaser-cat">ANAHATA CHAKRA & SOULMATE BONDING</span>
+                  <h3 class="teaser-title">Radha-Shukra Prem & Sambandh Harmony Kavach</h3>
+                  <p class="teaser-desc">Rishton me misunderstanding aur ego clashes ko dissolve karta hai. Madagascar Rose Quartz, Peach Moonstone aur Jade ka pavitra bandhan.</p>
+                  <div class="teaser-cta-line">
+                    <span>Explore Masterpiece Details</span>
+                    <span class="arrow-ico">→</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Product 4 Card: Triple Protection & Evil Eye -->
+              <div class="rolex-teaser-card" onclick="app.showProduct('love-nazar')">
+                <div class="teaser-img-box">
+                  <img src="assets/nazar-shield-1.jpg" alt="Triple Protection & Evil Eye Bracelet" class="teaser-img">
+                  <span class="teaser-badge">Nazar & Aura Kavach</span>
+                </div>
+                <div class="teaser-info">
+                  <span class="teaser-cat">AURA PURIFICATION & EVIL EYE DEFLECTION</span>
+                  <h3 class="teaser-title">Authentic Triple Protection & Evil Eye Shield</h3>
+                  <p class="teaser-desc">Buri nazar, psychic attacks aur jealous vibes ko instantly deflect karta hai. Black Obsidian, Hematite aur Tiger Eye ka pavitra bandhan.</p>
+                  <div class="teaser-cta-line">
+                    <span>Explore Masterpiece Details</span>
+                    <span class="arrow-ico">→</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- SECTION 2: SPIRITUAL INTENTIONS (PropZen Categories Concept) -->
+          <section class="home-section" id="section-intentions">
+            <div class="section-title-row center-title">
+              <span class="kicker-tag">SPIRITUAL INTENTION</span>
+              <h2 class="app-sec-title">Aapki Kundli Ko Kis Kripa Ki Zaroorat Hai?</h2>
+              <p class="section-subtitle">Har ek grah aur dasha ka prabhav alag hota hai. Apni vartaman chunauti ke anukool pavitra sankalp select karein:</p>
+            </div>
+            
+            <div class="intentions-grid">
+              <div class="intention-card" onclick="app.showProduct('money-magnet')">
+                <div class="intention-bg" style="background-image: url('assets/money-magnet-1.jpg');"></div>
+                <div class="intention-overlay"></div>
+                <div class="intention-body">
+                  <span class="int-kicker">KUBER YANTRA MATRIX</span>
+                  <h3>Dhan & Vyapar Aakarshan</h3>
+                  <p>Stagnant cashflow aur unexplainable financial blocks ko dissolve karke continuous wealth attract karein.</p>
+                  <span class="int-link">Explore Abundance Matrix →</span>
+                </div>
+              </div>
+
+              <div class="intention-card" onclick="app.showProduct('career-shield')">
+                <div class="intention-bg" style="background-image: url('assets/career-shield-1.jpg');"></div>
+                <div class="intention-overlay"></div>
+                <div class="intention-body">
+                  <span class="int-kicker">DASHAM BHAV • SURYA TEJAS</span>
+                  <h3>Career & Executive Authority</h3>
+                  <p>Promotion hurdles, office politics aur tough negotiations me commanding leadership aura pradaan karein.</p>
+                  <span class="int-link">Explore Authority Shield →</span>
+                </div>
+              </div>
+
+              <div class="intention-card" onclick="app.showProduct('love-harmony')">
+                <div class="intention-bg" style="background-image: url('assets/love-harmony-1.jpg');"></div>
+                <div class="intention-overlay"></div>
+                <div class="intention-body">
+                  <span class="int-kicker">ANAHATA CHAKRA • SHUKRA</span>
+                  <h3>Prem & Vivah Harmony</h3>
+                  <p>Married life me misunderstanding door karna aur genuine soulmate connection attract karna.</p>
+                  <span class="int-link">Explore Harmony Kavach →</span>
+                </div>
+              </div>
+
+              <div class="intention-card" onclick="app.showProduct('love-nazar')">
+                <div class="intention-bg" style="background-image: url('assets/nazar-shield-1.jpg');"></div>
+                <div class="intention-overlay"></div>
+                <div class="intention-body">
+                  <span class="int-kicker">PRATYANGIRA DEVI SHIELD</span>
+                  <h3>Nazar & Aura Suraksha</h3>
+                  <p>Buri drishti, competitors ki toxic envy aur unchahe psychological burnout se abhedya raksha chakra.</p>
+                  <span class="int-link">Explore Triple Shield →</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- SECTION 3: WHY CHOOSE ASTRA VEDIC (PropZen Why-Us 4-Pillars Concept) -->
+          <section class="home-section" id="section-why-us">
+            <div class="section-title-row center-title">
+              <span class="kicker-tag">THE HIMALAYAN LINEAGE</span>
+              <h2 class="app-sec-title">Kyu Seekers Hum Par Vishwas Karte Hain</h2>
+              <p class="section-subtitle">Commercial e-commerce se alag, Astra Vedic ek authentic Vedic ashram parampara hai jahan har artifact ka shudh shastra-sammat protocol hota hai.</p>
+            </div>
+
+            <div class="why-us-grid">
+              <div class="why-box">
+                <div class="why-icon-wrap">🪔</div>
+                <h3>Brahmamuhurta Consecration Only</h3>
+                <p>Har ek artifact ko subah 4:24 AM se 5:12 AM ke pavitra muhurta me vedic panditon dwara 108 ya 1008 beej mantron se chaitanya kiya jata hai.</p>
+              </div>
+              <div class="why-box">
+                <div class="why-icon-wrap">💎</div>
+                <h3>100% GI Lab Certified Gemstones</h3>
+                <p>Zero artificial color, zero synthetic glass. Har stone authentic laboratory testing aur gemological grading ke saath aata hai.</p>
+              </div>
+              <div class="why-box">
+                <div class="why-icon-wrap">📜</div>
+                <h3>Kundli & Lagna Verified Fit</h3>
+                <p>Aapke haath par pehanne se pehle hamare senior Acharya aapki janma tithi aur lagna verify karke anukoolta sunishchit karte hain.</p>
+              </div>
+              <div class="why-box">
+                <div class="why-icon-wrap">🛡️</div>
+                <h3>Zero Commercial Pressure</h3>
+                <p>Yahan koi robotic sales push ya cart checkout nahi hai. Keval shuddh confidential 1-on-1 vedic margdarshan.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- SECTION 4: SACRED SHLOKA BAND (PropZen Quote Section Concept) -->
+          <section class="home-quote-band">
+            <div class="quote-container">
+              <span class="quote-sanskrit-om">🕉️</span>
+              <blockquote class="vedic-quote">
+                "रत्नानि सर्वसम्पत्ति-हेतुभूतानि देहिनाम्। शुभाशुभ-प्रदात्रीणि ग्रह-तुष्टि-कराणि च॥"
+              </blockquote>
+              <p class="quote-translation">
+                "Pavitra ratna aur yantra cosmic urja ke celestial conductors hain jo manushya ke bio-magnetic aura ko grah-dosh se mukt karke samriddhi aur shaanti sthapit karte hain."
+              </p>
+              <cite>— बृहत्संहिता (Brihat Samhita), आचार्य वराहमिहिर</cite>
+            </div>
+          </section>
+
+          <!-- SECTION 5: QUICK VEDIC SERVICES -->
+          <section class="home-section">
+            <div class="section-title-row">
+              <div>
+                <span class="kicker-tag">DIRECT CONSULTATION SERVICES</span>
+                <h2 class="app-sec-title">Vedic Sansthan Services</h2>
+              </div>
+            </div>
+            <div class="services-grid-4">
+              <div class="service-tile" onclick="app.showPage('appointment')">
+                <span class="tile-icon">🪔</span>
+                <span class="tile-text">Kundli Check</span>
+              </div>
+              <div class="service-tile" onclick="app.showPage('appointment')">
+                <span class="tile-icon">💍</span>
+                <span class="tile-text">Kundli Milan</span>
+              </div>
+              <div class="service-tile" onclick="app.showPage('appointment')">
+                <span class="tile-icon">☀️</span>
+                <span class="tile-text">Sade Sati & Rahu</span>
+              </div>
+              <div class="service-tile" onclick="app.showPage('status')">
+                <span class="tile-icon">📄</span>
+                <span class="tile-text">Report Download</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- SECTION 6: CALLBACK & CONSULTATION BANNER (PropZen CTA Band Concept) -->
+          <section class="home-cta-band">
+            <div class="cta-band-inner">
+              <div class="cta-band-text">
+                <span class="cta-kicker">1-ON-1 CONFIDENTIAL CALL</span>
+                <h2>Samajh Nahi Aa Raha Kahan Se Shuru Karein?</h2>
+                <p>Apni Janma Kundli aur planetary dasha ke baare me Senior Vedic Acharya Vidyadhar Shastri ji se confidential private call schedule karein — koi obligation nahi, keval satvik guidance.</p>
+              </div>
+              <div class="cta-band-actions">
+                <button class="btn-app-gold btn-lg" onclick="app.showPage('appointment')">
+                  Book Free Acharya Call →
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!-- RESPONSIVE EXPANSIVE LUXURY FOOTER (PropZen Footer Concept) -->
+          <footer class="app-footer">
+            <div class="footer-grid">
+              <div class="footer-col brand-col">
+                <div class="footer-brand">अस्त्रा वैदिक • ASTRA VEDIC</div>
+                <p class="footer-mission">Himalayan Lineage Sanctuary • Shastra-sammat consecrated gemstones and Vedic astrology guidance for conscious seekers worldwide.</p>
+                <div class="footer-live-badge">
+                  <span class="live-dot"></span> 4:24 AM Brahmamuhurta Lineage Active
+                </div>
+              </div>
+              <div class="footer-col">
+                <h4>Sacred Masterpieces</h4>
+                <ul class="footer-links">
+                  <li><a href="javascript:void(0)" onclick="app.showProduct('money-magnet')">Money Magnet Bracelet</a></li>
+                  <li><a href="javascript:void(0)" onclick="app.showProduct('career-shield')">Career & Authority Shield</a></li>
+                  <li><a href="javascript:void(0)" onclick="app.showProduct('love-harmony')">Prem & Vivah Harmony Kavach</a></li>
+                  <li><a href="javascript:void(0)" onclick="app.showProduct('love-nazar')">Triple Protection & Nazar Shield</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>Vedic Sansthan</h4>
+                <ul class="footer-links">
+                  <li><a href="javascript:void(0)" onclick="app.showPage('appointment')">Book 1-on-1 Consultation</a></li>
+                  <li><a href="javascript:void(0)" onclick="app.showPage('status')">Download Kundli Almanac</a></li>
+                  <li><a href="javascript:void(0)" onclick="app.scrollToSection('section-why-us')">Our Consecration Lineage</a></li>
+                  <li><a href="javascript:void(0)" onclick="app.scrollToSection('section-intentions')">Spiritual Intentions</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>Sanctuary Sanctity</h4>
+                <p class="footer-note">All gemstones are GI Lab certified 100% natural minerals. Astrological consultations are purely satvik and non-commercial.</p>
+                <small class="footer-contact-info">Assistance: info@astravedic.com • Varanasi & Rishikesh Ashrams</small>
+              </div>
+            </div>
+            <div class="footer-bottom-bar">
+              <small>© 2026 Astra Vedic Inc. All rights reserved. Vedic Wisdom & Himalayan Consecration Lineage.</small>
+            </div>
+          </footer>
+
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- PAGE 2: ROLEX-STYLE DEDICATED PRODUCT PAGE -->
+      <!-- ============================================== -->
+      <section class="app-page" id="page-product-detail">
+        <div class="app-scroll-content">
+          
+          <!-- Back Bar -->
+          <div class="product-page-back-bar">
+            <button class="btn-back-pill" onclick="app.showPage('home')">
+              <span>← Back To Sanctuary</span>
+            </button>
+            <span class="rolex-spec-tag">Masterpiece Showcase</span>
+          </div>
+
+          <!-- Dynamic Product Container (Injected by JS) -->
+          <div id="dynamic-product-content">
+            <!-- Full page Rolex content loaded here -->
+          </div>
+
+          <div style="margin-top: 14px;">
+            <button class="btn-app-gold full-w" onclick="app.showPage('appointment')">
+              Book Acharya Consultation Appointment →
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- PAGE 3: BOOK APPOINTMENT PAGE -->
+      <!-- ============================================== -->
+      <section class="app-page" id="page-appointment">
+        <div class="app-scroll-content">
+          
+          <div class="appointment-header-card">
+            <span class="modal-badge">100% CONFIDENTIAL</span>
+            <h2 class="appt-title">Book Vedic Consultation</h2>
+            <p class="appt-desc">Apni birth details darj karein. Senior Acharya aapki kundli ka dasha-varshphal analyze karke private call connect karenge.</p>
+          </div>
+
+          <form id="appointment-form" onsubmit="event.preventDefault(); app.submitAppointment();" class="appt-form-card">
+            <div class="form-group">
+              <label>Aapka Poora Naam *</label>
+              <input type="text" id="appt-name" placeholder="Jaise: Siddharth Sharma" required class="app-input">
+            </div>
+
+            <div class="form-group">
+              <label>WhatsApp / Mobile Number *</label>
+              <input type="tel" id="appt-phone" placeholder="+91 98765 43210" required class="app-input">
+            </div>
+
+            <div class="form-group">
+              <label>Sawaal Ya Consultation Focus *</label>
+              <select id="appt-concern" class="app-input">
+                <option value="Dhan & Wealth Alignment (Money Magnet)">Dhan & Wealth Alignment (Money Magnet)</option>
+                <option value="Career & Business Success Shield">Career & Business Success Shield</option>
+                <option value="Love Harmony & Nazar Dosh Suraksha">Love Harmony & Nazar Dosh Suraksha</option>
+                <option value="Sade Sati, Dhaiya & Rahu Shanti">Sade Sati, Dhaiya & Rahu Shanti</option>
+                <option value="General Kundli & Dasha Reading">General Kundli & Dasha Reading</option>
+              </select>
+            </div>
+
+            <div class="form-input-grid">
+              <div class="form-group">
+                <label>Janma Tithi (DOB) *</label>
+                <input type="date" id="appt-dob" required class="app-input">
+              </div>
+              <div class="form-group">
+                <label>Janma Samay (TOB) *</label>
+                <input type="time" id="appt-tob" required class="app-input">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Janma Sthan (Birth City) *</label>
+              <input type="text" id="appt-city" placeholder="Jaise: Varanasi, Uttar Pradesh" required class="app-input">
+            </div>
+
+            <div class="form-group">
+              <label>Pasandida Acharya Chunein:</label>
+              <div class="acharya-select-list">
+                <label class="radio-card active">
+                  <input type="radio" name="appt-acharya" value="Acharya Vidyadhar Shastri" checked>
+                  <div>
+                    <strong>Acharya Vidyadhar Shastri</strong>
+                    <small>24 Yrs Exp • Parashara & Bhrigu Samhita</small>
+                  </div>
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="appt-acharya" value="Dr. Gayatri Devi Sharma">
+                  <div>
+                    <strong>Dr. Gayatri Devi Sharma</strong>
+                    <small>18 Yrs Exp • KP & Marriage Compatibility</small>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-app-gold full-w" style="margin-top: 10px;">
+              Confirm & Book Free Appointment ✦
+            </button>
+          </form>
+
+          <!-- Confirmation Slip (Hidden until submit) -->
+          <div id="appointment-success-box" class="pass-mini-card" style="display: none;">
+            <div class="pass-mini-top">
+              <span>ASTRA INTAKE PASS</span>
+              <strong id="appt-pass-id">ASTRA-8921</strong>
+            </div>
+            <div class="pass-mini-body">
+              <div><small>Seeker</small><span id="appt-pass-name">-</span></div>
+              <div><small>Assigned Acharya</small><span id="appt-pass-acharya">-</span></div>
+              <div><small>Focus</small><span id="appt-pass-focus">-</span></div>
+              <div><small>Session Status</small><span class="free-text">Confirmed</span></div>
+            </div>
+            <p style="font-size: 0.74rem; color: #475569; margin-top: 10px;">
+              Aapka appointment schedule ho gaya hai. Acharya ji call se pehle aapki kundli prepare karenge.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- PAGE 4: STATUS & REPORT DOWNLOAD PORTAL -->
+      <!-- ============================================== -->
+      <section class="app-page" id="page-status">
+        <div class="app-scroll-content">
+          
+          <div class="status-header-card">
+            <span class="modal-badge">REPORT PORTAL</span>
+            <h2 class="appt-title">Kundli & Order Status</h2>
+            <p class="appt-desc">Apna registered WhatsApp ya Mobile number enter karein aur live astrological verification status check karein ya apni PDF report download karein.</p>
+          </div>
+
+          <div class="status-lookup-box">
+            <form onsubmit="event.preventDefault(); app.checkUserStatus();" class="status-search-form">
+              <div class="form-group">
+                <label>Registered Mobile Number</label>
+                <input type="tel" id="status-phone-input" placeholder="e.g. 9876543210" required class="app-input">
+              </div>
+              <button type="submit" class="btn-app-gold full-w">
+                Check Status & Download 🔍
+              </button>
+            </form>
+
+            <!-- Result Box -->
+            <div id="status-result-area" class="status-report-card" style="display: none;">
+              <div class="status-header-row">
+                <div>
+                  <span class="report-badge green">Verified By Acharya</span>
+                  <h4 id="report-user-title">Siddharth Sharma Ji</h4>
+                  <small id="report-reg-phone">+91 98765 43210</small>
+                </div>
+                <div class="status-circle-check">✓</div>
+              </div>
+
+              <div class="status-timeline">
+                <div class="timeline-step done">
+                  <span class="tl-dot"></span>
+                  <div>
+                    <strong>1. Janma Kundli Intake Logged</strong>
+                    <small>Accurate Ephemeris coordinates calculated</small>
+                  </div>
+                </div>
+                <div class="timeline-step done">
+                  <span class="tl-dot"></span>
+                  <div>
+                    <strong>2. Acharya Verification Completed</strong>
+                    <small>Vimshottari Dasha & Shodashvarga charts analyzed</small>
+                  </div>
+                </div>
+                <div class="timeline-step done">
+                  <span class="tl-dot"></span>
+                  <div>
+                    <strong>3. PDF Report Ready for Download</strong>
+                    <small>Complete 25-Year Planetary Almanac Prepared</small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="report-action-box">
+                <button class="btn-app-gold full-w" onclick="app.downloadReportPdf()">
+                  <span>📥 Download Janma Kundli Report (PDF)</span>
+                </button>
+                <button class="btn-app-outline-sm full-w" onclick="app.showPage('appointment')">
+                  Book Call to Discuss This Report →
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+    <!-- FIXED BOTTOM APP NAVIGATION DOCK (Apple HIG Liquid Glass Floating Dock) -->
+    <nav class="app-bottom-nav" aria-label="Bottom Navigation">
+      <button class="nav-tab active" id="tab-nav-home" onclick="app.showPage('home')">
+        <span class="tab-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </span>
+        <span class="tab-text">Home</span>
+      </button>
+
+      <button class="nav-tab" id="tab-nav-appointment" onclick="app.showPage('appointment')">
+        <span class="tab-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+            <path d="m9 16 2 2 4-4"/>
+          </svg>
+        </span>
+        <span class="tab-text">Book Call</span>
+      </button>
+
+      <button class="nav-tab" id="tab-nav-status" onclick="app.showPage('status')">
+        <span class="tab-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+            <polyline points="10 9 9 9 8 9"/>
+          </svg>
+        </span>
+        <span class="tab-text">Status / Report</span>
+      </button>
+    </nav>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
